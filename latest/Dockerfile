@@ -1,7 +1,7 @@
 FROM store/oracle/serverjre:8 
 
 # Maintainer
-MAINTAINER shinyay <shinya.com@gmail.com>
+MAINTAINER catalin-siv <catalin.prodan@siveco.com>
 
 # Set environment variables and default password for user 'admin'
 ENV GLASSFISH_PKG=latest-glassfish.zip \
@@ -30,7 +30,7 @@ RUN yum install -y wget unzip && \
     asadmin --user=admin stop-domain 
 
 # Ports being exposed
-EXPOSE 4848 8080 8181
+EXPOSE 4949 8780 8781
 
 # Start asadmin console and the domain
 CMD ["asadmin", "start-domain", "-v"]
